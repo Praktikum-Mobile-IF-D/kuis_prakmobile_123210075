@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:responsi_123210075/screens/detail_screen.dart';
 import 'package:responsi_123210075/utils/data_buku.dart';
 
@@ -47,14 +48,19 @@ class HomeScreen extends StatelessWidget {
                             fontWeight: FontWeight.bold,
                             color: Colors.blue),
                       ),
+                      SizedBox(height:8),
                       Text(
                         listBuku[index].author,
                         style: TextStyle(
                             fontSize: 14, fontWeight: FontWeight.w400),
                       ),
-                      ListTile(
-                        leading: Icon(Icons.book),
-                        title: Text(listBuku[index].pages.toString()),
+                      SizedBox(height:8),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Icon(Icons.book_outlined),
+                          Text(listBuku[index].pages.toString()),
+                        ],
                       )
                     ],
                   ),
